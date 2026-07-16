@@ -1,0 +1,42 @@
+name: CI Workflow for PR Events
+on:
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+
+
+
+jobs:
+  ci-workflow:
+    # Fixed condition to handle both push events and PR events
+    if: |
+      github.event_name == 'push' ||
+      github.event.action == 'opened' || 
+      github.event.action == 'reopened' || 
+      (github.event.action == 'labeled' && github.event.label.name == 'ready-to-merge')
+    runs-on: X64
+    env:
+      QT_QPA_PLATFORM: offscreen
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+        
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.7.9'
+        
+    - name: Install dependencies
+      run: |
+        $env:PATH="C:\actions-runner\_work\_tool\Python\3.7.9\x64;C:\actions-runner\_work\_tool\Python\3.7.9\x64\Scripts;$env:PATH"
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip list
+        
+    - name: Run specific test with updated PYTHONPATH
+      run: |
+        $env:PATH="C:\actions-runner\_work\_tool\Python\3.7.9\x64;C:\actions-runner\_work\_tool\Python\3.7.9\x64\Scripts;$env:PATH"
+        $env:PYTHONPATH="${{ github.workspace }};${{ github.workspace }}\flowstudio"
+        cd flowstudio
+        pytest

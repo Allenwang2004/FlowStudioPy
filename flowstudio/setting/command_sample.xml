@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+	<RACE_FLOW_COMMAND timeout="3000">
+		<RequestFormat>
+		  <packet_type type="uint8" value="0x05" />
+		  <race_type type="uint8" value="0x5A" />
+		  <packet_len type="uint16" value="__LEN_TO_END__" />
+		  <race_id type="uint16" value="0x0102" />
+		  <flow_send type="uint8_array" array_length="*" />
+		</RequestFormat>
+		<ResponseFormat>
+		  <packet_type type="uint8" value="0x05" />
+		  <race_type type="uint8" value="0x5B" />
+		  <packet_len type="uint16" />
+		  <race_id type="uint16" value="0x0102" />
+		  <flow_res type="uint8_array" array_length="*" />
+		</ResponseFormat>
+	</RACE_FLOW_COMMAND>
+</CommandBook>

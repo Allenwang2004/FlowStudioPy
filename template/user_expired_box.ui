@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>user_expired_box</class>
+ <widget class="QDialog" name="user_expired_box">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>340</width>
+    <height>150</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>340</width>
+    <height>150</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>321</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>20</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="signin">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 14px;
+    background-color: #2D8CFF;  /* 品牌蓝色 */
+    color: white;
+    border-radius: 6px;
+    padding: 10px 10px;
+    font-weight: 500;
+    border: none;
+    min-width: 50px;
+}
+QPushButton:hover {
+    background-color: #1A73E8;  /* 悬停加深 */
+}
+QPushButton:pressed {
+    background-color: #1557B0;  /* 按压效果 */
+}</string>
+      </property>
+      <property name="text">
+       <string>Sign in</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="contactus">
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 14px;
+   	background-color: #d3d3d3;  /* 浅灰背景 */
+    color: #303030; 
+    border-radius: 6px;
+    padding: 10px 10px;
+    border: none;
+    min-width: 50px;
+}
+QPushButton:hover {
+    background-color: #b3b3b3;  /* 悬停加深 */
+}
+QPushButton:pressed {
+    background-color: #b3b3b3;  /* 按压效果 */
+}</string>
+      </property>
+      <property name="text">
+       <string>Contact Us</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="close">
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 14px;
+   	background-color: #d3d3d3;  /* 浅灰背景 */
+    color: #303030; 
+    border-radius: 6px;
+    padding: 10px 10px;
+    border: none;
+    min-width: 50px;
+}
+QPushButton:hover {
+    background-color: #b3b3b3;  /* 悬停加深 */
+}
+QPushButton:pressed {
+    background-color: #b3b3b3;  /* 按压效果 */
+}</string>
+      </property>
+      <property name="text">
+       <string>Close</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>321</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>🚨 Your trial has expired!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_msg">
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>Please sign up your account or contact us</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
